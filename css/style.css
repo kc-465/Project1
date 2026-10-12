@@ -1,6 +1,32 @@
-/* CSS Reset */
+/* CSS RESET */
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/* MASTER */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*
+/* INDEX *
+.hero-grid {
+
+}
+
+.cards-gallery {
+
+}
+
+/* DETAIL *
+.content-grid {
+
+}
+*/
