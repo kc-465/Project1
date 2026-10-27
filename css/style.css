@@ -12,7 +12,13 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    background-color: gray;
+    background-color: rgb(88, 88, 88);
+    color: white;
+}
+
+.logo p {
+    font-family: "Oswald", Impact, sans-serif;
+    font-weight: bold;
 }
 
 .nav-header, .nav-footer {
@@ -28,6 +34,18 @@ a {
     text-decoration: none;
 }
 
+.nav-header a, .nav-footer a {
+    color: rgb(200, 206, 212);
+}
+
+.nav-header a:hover, .nav-footer a:hover {
+    color: rgb(175, 181, 187);
+}
+
+.nav-header :active, .nav-footer a:active {
+    color: white;
+}
+
 /* INDEX */
 main {
     margin: 0px auto;
@@ -37,7 +55,6 @@ main {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -46,19 +63,45 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .card {
     background-color: lightgray;
     padding: 2rem;
     border-radius: 8px;
+    margin-top: auto;
+}
+
+.card h2 {
+    padding-bottom: 1rem;
 }
 
 /* DETAIL */
+.lead-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .content-grid {
     display: grid;
-    grid-template-columns: 3fr 1fr;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -70,6 +113,10 @@ main {
         flex-direction: column;
         flex-basis: 100%;
     }
+
+    .hero-grid, .card-gallery, .content-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* DESKTOP LAYOUT */
@@ -78,11 +125,23 @@ main {
         flex-direction: row;
     }
     
+    .site-header, .site-footer {
+        justify-content: space-between;
+    }
+
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .card-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
     .card {
         flex-basis: 30%;
     }
-
-    .site-header, .site-footer {
-        justify-content: space-between;
+    
+    .content-grid {
+        grid-template-columns: 3fr 1fr;
     }
 }
