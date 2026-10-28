@@ -42,7 +42,7 @@ a {
     color: rgb(175, 181, 187);
 }
 
-.nav-header :active, .nav-footer a:active {
+.nav-header a:active, .nav-footer a:active {
     color: white;
 }
 
