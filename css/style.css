@@ -66,10 +66,16 @@ main {
 }
 
 .card {
-    background-color: lightgray;
+    background-color: rgb(237, 237, 237);
     padding: 2rem;
     border-radius: 8px;
     margin-top: auto;
+}
+
+.card-media {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 6px;
 }
 
 .card h2 {
@@ -103,6 +109,15 @@ main {
 .content-grid {
     display: grid;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.content-grid div, .content-grid h2 {
+    padding-bottom: 1rem;
+}
+
+.project-banner {
+    width: 100%;
     padding-bottom: 1rem;
 }
 
